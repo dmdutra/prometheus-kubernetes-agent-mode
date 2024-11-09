@@ -20,5 +20,5 @@ git clone https://github.com/dmdutra/prometheus-kubernetes-agent-mode.git
 
 # Installing helm chart
 
-helm install --set prometheus.endpoint=https://prometheus.example.com .
+helm install prometheus-agent --set prometheus.endpoint=https://prometheus.example.com .
 ```
