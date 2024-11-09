@@ -1,0 +1,25 @@
+replicaCount: 1
+
+image:
+  repository: prom/prometheus
+
+resources:
+  requests:
+    cpu: 1
+    memory: 3Gi
+  limits:
+    cpu: 2
+    memory: 4Gi
+
+service:
+  type: NodePort
+  port: 8080
+  targetPort: 9090
+  nodePort: 30000
+
+alertmanager:
+  endpoint: ''
+
+prometheus:
+  endpoint: ''
+  retentionTime: 12h
